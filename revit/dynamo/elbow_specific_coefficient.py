@@ -44,9 +44,10 @@ VANES = bool(_in(2, False))
 APPLY = bool(_in(3, False))
 
 # --- zeta tablolari -------------------------------------------------------
-# 90 derece dikdortgen dirsek, kanatsiz: (r/W, zeta90)
-ZETA90 = [(0.0, 1.20), (0.5, 0.65), (0.75, 0.35), (1.0, 0.22),
-          (1.5, 0.17), (2.0, 0.15)]
+# 90 derece dikdortgen dirsek, kanatsiz, H/W ~ 1-1.5: (r/W, zeta90)
+# ASHRAE CR3-1 / Idelchik B1 = 0.21/(r/W)^2.5 (r/W<1), 0.21/sqrt(r/W) (r/W>=1)
+ZETA90 = [(0.0, 1.20), (0.5, 1.10), (0.75, 0.42), (1.0, 0.21),
+          (1.5, 0.16), (2.0, 0.15)]
 ZETA90_VANES = 0.30
 # Aci duzeltme katsayisi K(aci): (derece, K)
 ANGLE_K = [(0, 0.0), (30, 0.45), (45, 0.60), (60, 0.78), (75, 0.90),
